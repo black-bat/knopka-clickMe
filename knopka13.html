@@ -1,0 +1,99 @@
+<div>
+<button id=knopka>click me</button>
+</div>
+
+
+
+
+
+<script>
+
+var knopkaClick = document.getElementById('knopka',"#knopka");
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
+knopkaClick.addEventListener ('click', function(d) {
+    document.body.style.backgroundColor = 'rgb('+getRandomInt(0,255)+', '+getRandomInt(0,255)+', '+getRandomInt(0,255)+')';
+  });
+
+
+  knopkaClick.addEventListener ('click', function(e) {
+
+    knopkaClick.style.left = getRandomInt(0,300) +'px';
+    knopkaClick.style.top = getRandomInt(0,300)+'px';
+  });
+
+  knopkaClick.addEventListener ('contextmenu', function(r) {
+
+    document.body.style.backgroundColor = 'white';
+    knopkaClick.style.left = event.clientX = 928 +'px';
+    knopkaClick.style.top = event.clientY = 325 +'px';
+    
+  });
+  
+
+
+//   event.clientX
+//   event.clientY
+
+
+
+//   knopkaClick.addEventListener ('click', function(s) { alert('knopka');
+// });
+
+
+
+
+
+
+
+
+// var knopkaClick = document.getElementById('knopka');
+// var x = Math.floor( Math.random() *255);
+// var y = Math.floor( Math.random() *255);
+// var z = Math.floor( Math.random() *255);
+// var fon = 'rgb('+x+','+y+','+z+');';
+
+
+// knopkaClick.addEventListener('click', function(x,y,z) {
+//     document.body.style.bgColor = 'rgb('+x+','+y+','+z+')';
+//     });
+    
+
+
+
+
+</script>
+
+
+<!-- // if (document.body.style.bgColor = 'white') {
+    // document.bgColor = 'random'*256;  
+    // } else {
+    //     document.body.style.bgColor = 'white';
+    // }
+      
+    // }); -->
+
+
+
+
+
+<style>
+    #knopka {
+        text-align: center;
+        width: 55px;
+        font-size: 20px;
+        background: greenyellow;
+        border-radius: 50%;
+        border: 2px solid red;
+
+        display: block;
+        margin: 0;
+        left: 50%;
+        right: 50%;
+        position: absolute;
+        top: 50%;
+
+    }
+</style>
